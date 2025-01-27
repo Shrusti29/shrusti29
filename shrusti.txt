@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Fact</h1>
+        <div id="fact-container">
+            <p id="fact"></p>
+            <p id="importance"></p>
+        </div>
+        <button id="next-fact">Next Fact</button>
+    </div>
+    <script>
+        const facts = [
+            {
+                fact: "AI can process and analyze data much faster than humans.",
+                importance: "This allows for quicker decision-making in various fields."
+            },
+            {
+                fact: "Machine learning is a subset of AI that enables systems to learn from data.",
+                importance: "It improves the accuracy of predictions and classifications."
+            },
+            {
+                fact: "Natural language processing (NLP) allows AI to understand and generate human language.",
+                importance: "This is essential for applications like chatbots and virtual assistants."
+            },
+            {
+                fact: "AI is used in healthcare for diagnostics and personalized medicine.",
+                importance: "It can lead to better patient outcomes and more efficient treatments."
+            },
+            {
+                fact: "AI algorithms can analyze large datasets to identify patterns.",
+                importance: "This is useful in fields like finance, marketing, and research."
+            },
+            {
+                fact: "AI can automate repetitive tasks, freeing up human workers for more complex work.",
+                importance: "This increases productivity and job satisfaction."
+            },
+            {
+                fact: "AI technologies are being integrated into smart devices.",
+                importance: "This enhances user experience and functionality."
+            },
+            {
+                fact: "AI can improve cybersecurity by detecting anomalies in network traffic.",
+                importance: "This helps in preventing data breaches and cyber attacks."
+            },
+            {
+                fact: "Ethical considerations are crucial in AI development.",
+                importance: "Ensuring fairness and transparency is essential to avoid bias."
+            },
+            {
+                fact: "AI is expected to contribute significantly to the global economy.",
+                importance: "It is projected to add trillions of dollars in value across industries."
+            }
+        ];
+
+        let currentFactIndex = 0;
+
+        function displayFact() {
+            const factElement = document.getElementById('fact');
+            const importanceElement = document.getElementById('importance');
+            
+            factElement.textContent = facts[currentFactIndex].fact;
+            importanceElement.textContent = facts[currentFactIndex].importance;
+        }
+
+        document.getElementById('next-fact').addEventListener('click', () => {
+            currentFactIndex = (currentFactIndex + 1) % facts.length;
+            displayFact();
+        });
+
+        // Display the first fact on page load
+        displayFact();
+    </script>
+</body>
+</html>
