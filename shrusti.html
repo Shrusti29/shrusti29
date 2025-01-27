@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 24.8.4.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		pre { font-family: "Liberation Mono", monospace; font-size: 10pt; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;AI Fact&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;AI Fact&lt;/h1&gt;
+        &lt;div id=&quot;fact-container&quot;&gt;
+            &lt;p id=&quot;fact&quot;&gt;&lt;/p&gt;
+            &lt;p id=&quot;importance&quot;&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;button id=&quot;next-fact&quot;&gt;Next Fact&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        const facts = [
+            {
+                fact: &quot;AI can process and analyze data much faster than humans.&quot;,
+                importance: &quot;This allows for quicker decision-making in various fields.&quot;
+            },
+            {
+                fact: &quot;Machine learning is a subset of AI that enables systems to learn from data.&quot;,
+                importance: &quot;It improves the accuracy of predictions and classifications.&quot;
+            },
+            {
+                fact: &quot;Natural language processing (NLP) allows AI to understand and generate human language.&quot;,
+                importance: &quot;This is essential for applications like chatbots and virtual assistants.&quot;
+            },
+            {
+                fact: &quot;AI is used in healthcare for diagnostics and personalized medicine.&quot;,
+                importance: &quot;It can lead to better patient outcomes and more efficient treatments.&quot;
+            },
+            {
+                fact: &quot;AI algorithms can analyze large datasets to identify patterns.&quot;,
+                importance: &quot;This is useful in fields like finance, marketing, and research.&quot;
+            },
+            {
+                fact: &quot;AI can automate repetitive tasks, freeing up human workers for more complex work.&quot;,
+                importance: &quot;This increases productivity and job satisfaction.&quot;
+            },
+            {
+                fact: &quot;AI technologies are being integrated into smart devices.&quot;,
+                importance: &quot;This enhances user experience and functionality.&quot;
+            },
+            {
+                fact: &quot;AI can improve cybersecurity by detecting anomalies in network traffic.&quot;,
+                importance: &quot;This helps in preventing data breaches and cyber attacks.&quot;
+            },
+            {
+                fact: &quot;Ethical considerations are crucial in AI development.&quot;,
+                importance: &quot;Ensuring fairness and transparency is essential to avoid bias.&quot;
+            },
+            {
+                fact: &quot;AI is expected to contribute significantly to the global economy.&quot;,
+                importance: &quot;It is projected to add trillions of dollars in value across industries.&quot;
+            }
+        ];
+
+        let currentFactIndex = 0;
+
+        function displayFact() {
+            const factElement = document.getElementById('fact');
+            const importanceElement = document.getElementById('importance');
+            
+            factElement.textContent = facts[currentFactIndex].fact;
+            importanceElement.textContent = facts[currentFactIndex].importance;
+        }
+
+        document.getElementById('next-fact').addEventListener('click', () =&gt; {
+            currentFactIndex = (currentFactIndex + 1) % facts.length;
+            displayFact();
+        });
+
+        // Display the first fact on page load
+        displayFact();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
